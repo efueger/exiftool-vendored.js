@@ -14,7 +14,7 @@ cache: yarn
 
 env:
   global:
-    - CC_TEST_REPORTER_ID=920268a79191159c5a28a85d6a5c54682d8b83be6d57a11784cab54225366fbd
+    - CC_TEST_REPORTER_ID=b82db7b529b123b90a6a51473445214c7cd1ef4a9dd1a3b6b818fd26bd300e22
 
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
