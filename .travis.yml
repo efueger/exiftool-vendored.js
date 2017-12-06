@@ -10,3 +10,16 @@ os:
 osx_image: xcode8.3
 script: 'npm run test'
 cache: yarn
+
+
+env:
+  global:
+    - CC_TEST_REPORTER_ID=920268a79191159c5a28a85d6a5c54682d8b83be6d57a11784cab54225366fbd
+
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
